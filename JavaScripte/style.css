@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'inter';
+    src: url('assets/fonts/inter.woff') format('woff2'),
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'shahin';
+    src: url('assets/fonts/Shahin.woff2') format('woff2'),
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'inter2';
+    src: url('assets/fonts/inter2.woff') format('woff2'),
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'inter3';
+    src: url('assets/fonts/inter3.ttf') format('ttf'),
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+  
