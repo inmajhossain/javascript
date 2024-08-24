@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmaj - Web Developer</title>
+    <link rel="shortcut icon" href="https://framerusercontent.com/images/U07AsvVKwVsSMuFrIdeV15pXmbI.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily:{
+                inter:["inter", "sans"],
+                shahin:["shahin", "sans"],
+                inter2:[ "inter2", "sans"],
+                inter3:[ "inter3", "sans"],
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-violet-500 text-white mx-auto font-inter3 font-bold text-center">
+
+
+  <header>
+    <nav class="flex justify-between bg-gray-800 py-4">
+      <div class="flex items-center">
+        <a href="#" class="text-lg font-bold text-white hover:text-gray-300">Logo</a>
+      </div>
+      <div class="hidden md:flex items-center">
+        <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out mx-4">Home</a>
+        <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out mx-4">About</a>
+        <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out mx-4">Contact</a>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button id="nav-toggle" class="text-gray-300 hover:text-white transition duration-300 ease-in-out">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="4" width="8" height="8" rx="1" fill="#fff" />
+            <rect x="12" y="4" width="8" height="8" rx="1" fill="#fff" />
+            <rect x="4" y="12" width="8" height="8" rx="1" fill="#fff" />
+            <rect x="12" y="12" width="8" height="8" rx="1" fill="#fff" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    
+    <!-- Mobile navigation menu -->
+    <div id="mobile-nav" class="hidden absolute top-0 left-0 w-full h-[150px] bg-gray-800 pt-4">
+      <a href="#" class="block text-gray-300 hover:text-white transition duration-300 ease-in-out mx-4 py-2">Home</a>
+      <a href="#" class="block text-gray-300 hover:text-white transition duration-300 ease-in-out mx-4 py-2">About</a>
+      <a href="#" class="block text-gray-300 hover:text-white transition duration-300 ease-in-out mx-4 py-2">Contact</a>
+    </div>
+  </header>
+ 
+  <main>
+    <section>
+      <h2 class="text-[200px]">Java Script Learning</h2>
+      
+      
+      <button class="button mt-[100px] mb-[100px]">
+        <span class="button_lg">
+            <span class="button_sl"></span>
+            <span class="button_text">Download Now</span>
+        </span>
+    </button>
+
+
+     
+<div class="flex items-center justify-center h-full">
+  <button
+    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+    type="button"
+  >
+    Facebook
+  </button>
+  <button
+    class="text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+    type="button"
+  >
+    YouTube
+  </button>
+  <button
+    class="text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-400/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+    type="button"
+  >
+    Twitter
+  </button>
+  <button
+    class="text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+    type="button"
+  >
+    Instagram
+  </button>
+</div>
+
+
+
+
+    </section>
+
+
+    <div class="slider relative w-full h-[300px] overflow-hidden">
+      <div class="slider-inner relative w-full h-full flex overflow-x-hidden">
+        <div class="slider-item w-full h-full flex justify-center items-center">
+          <img src="https://plus.unsplash.com/premium_photo-1676478746990-4ef5c8ef234a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvd2VyfGVufDB8fDB8fHww" alt="Photo 1" class="w-full h-full object-cover">
+        </div>
+        <div class="slider-item w-full h-full flex justify-center items-center">
+          <img src="https://images.unsplash.com/photo-1487139975590-b4f1dce9b035?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zmxvd2VyfGVufDB8fDB8fHww" alt="Photo 2" class="w-full h-full object-cover">
+        </div>
+        <div class="slider-item w-full h-full flex justify-center items-center">
+          <img src="https://images.unsplash.com/photo-1447875569765-2b3db822bec9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2VyfGVufDB8fDB8fHww" alt="Photo 3" class="w-full h-full object-cover">
+        </div>
+        <div class="slider-item w-full h-full flex justify-center items-center">
+          <img src="https://plus.unsplash.com/premium_photo-1683121484963-a491b935780b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Zmxvd2VyfGVufDB8fDB8fHww" alt="Photo 4" class="w-full h-full object-cover">
+        </div>
+        <div class="slider-item w-full h-full flex justify-center items-center">
+          <img src="https://images.unsplash.com/photo-1546842931-886c185b4c8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Photo 5" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <button class="slider-prev absolute top-0 left-0 z-10 p-4 text-3xl text-white hover:text-gray-300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button class="slider-next absolute top-0 right-0 z-10 p-4 text-3xl text-white hover:text-gray-300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+      <div class="slider-dots absolute bottom-0 left-0 w-full flex justify-center mb-4">
+        <button class="slider-dot w-4 h-4 bg-white rounded-full mx-2 hover:bg-gray-300"></button>
+        <button class="slider-dot w-4 h-4 bg-white rounded-full mx-2 hover:bg-gray-300"></button>
+        <button class="slider-dot w-4 h-4 bg-white rounded-full mx-2 hover:bg-gray-300"></button>
+        <button class="slider-dot w-4 h-4 bg-white rounded-full mx-2 hover:bg-gray-300"></button>
+        <button class="slider-dot w-4 h-4 bg-white rounded-full mx-2 hover:bg-gray-300"></button>
+      </div>
+    </div>
+
+
+
+
+    <!-- sweiper -->
+
+    <section>
+
+    <div class="swiper-container w-full h-screen overflow-hidden">
+      <div class="swiper-wrapper flex">
+        <div class="swiper-slide w-full h-full flex justify-center items-center">
+          <img src="https://plus.unsplash.com/premium_photo-1676478746990-4ef5c8ef234a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zmxvd2VyfGVufDB8fDB8fHww" alt="Photo 1" class="w-full h-full object-cover">
+        </div>
+        <div class="swiper-slide w-full h-full flex justify-center items-center">
+          <img src="https://images.unsplash.com/photo-1546842931-886c185b4c8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Photo 2" class="w-full h-full object-cover">
+        </div>
+        <div class="swiper-slide w-full h-full flex justify-center items-center">
+          <img src="photo3.jpg" alt="Photo 3" class="w-full h-full object-cover">
+        </div>
+        <div class="swiper-slide w-full h-full flex justify-center items-center">
+          <img src="photo4.jpg" alt="Photo 4" class="w-full h-full object-cover">
+        </div>
+        <div class="swiper-slide w-full h-full flex justify-center items-center">
+          <img src="photo5.jpg" alt="Photo 5" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div class="swiper-pagination absolute bottom-0 left-0 w-full flex justify-center mb-4">
+        <span class="swiper-pagination-bullet w-4 h-4 bg-white rounded-full mx-2"></span>
+        <span class="swiper-pagination-bullet w-4 h-4 bg-white rounded-full mx-2"></span>
+        <span class="swiper-pagination-bullet w-4 h-4 bg-white rounded-full mx-2"></span>
+        <span class="swiper-pagination-bullet w-4 h-4 bg-white rounded-full mx-2"></span>
+        <span class="swiper-pagination-bullet w-4 h-4 bg-white rounded-full mx-2"></span>
+      </div>
+      <button class="swiper-button-prev absolute top-0 left-0 z-10 p-4 text-3xl text-white hover:text-gray-300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button class="swiper-button-next absolute top-0 right-0 z-10 p-4 text-3xl text-white hover:text-gray-300">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+    </div>
+
+  </section>
+
+
+
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+
+    
+
+
+  </main>
+ 
+<!-- method 2 is atribute to enter app.js -->
+  <script src="string.js">
+    
+    // var name = "Zohans"
+    // var bangla = 65
+    // var english = 88
+    // var math = 76
+    // var science = 92
+    
+    // var TotalMarks = bangla + english + math + science
+    // var AverageMarks = (bangla + english + math + science) / 4
+
+    // console.log(name, "Total Marks :", TotalMarks)
+    // console.log(name, "Average Marks :", AverageMarks)
+    
+    
+    // var name = "Zohan"
+    // var age = 32
+    // var married = "Is Married"
+    
+    
+    // if(age == 32) 
+    // {
+    //   console.log(name, married)
+    // } 
+    // else
+    // {console.log(name,"Is Not Marreid")
+    // }
+
+
+    // var UserName = "Zohan"
+    // var password = 852456
+
+    
+    
+    // if(password == 852455) 
+    // {
+    //   console.log(UserName, "Successfully Loged In")
+    // }
+    // else
+    // {console.log(UserName, "Incorrect Password")
+    // }
+
+    
+    
+
+
+   
+
+
+
+
+  </script>
+</body>
+</html>
