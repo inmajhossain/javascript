@@ -1,79 +1,94 @@
-// Round Number or Integer Number
 
-const carModel = 2024
-console.log(carModel)
-console.log(typeof carModel)
+// Else If Er Uses
 
-// Decimal Number (Math er sese . er por koto digit dekhabo seta)
+// 90+ -> Grade A+
+// 80+ -> Grade A
+// 70+ -> Grade B
+// 60+ -> Grade C
+// 50+ -> Grade D
+// below 50 Fail
 
-let decimalNumber = 100.51545778
-let sum = decimalNumber + 400
-console.log(sum.toFixed(2))
+const average = 90
 
-// Round Number : Point jotoi thakuk round number hobe .5 er upore hole 1 barbe.
+if (average >= 90)
+{console.log("Grade A+")}   
 
-let roundNum = Math.round(decimalNumber)
-console.log(roundNum)
+else if (average >= 80) 
+{console.log("Grade A")}
 
+else if (average >= 70) 
+{console.log("Grade B")}
 
+else if (average >= 60) 
+{console.log("Grade C")}
 
-let value = 99.49563685245
-let netValue = value + 50
-let showValue = Math.round(netValue)
-console.log("Round Number :", showValue)
+else if (average >= 50) 
+{console.log("Grade D")} 
 
-// Math Ceil Number
+else 
+{console.log("Fail")} 
 
-// Total Valuer por jodi point 1 o besi hoy tahole 1 bere jabe.
-
-let Bangla = Math.ceil(77.01)
-console.log(Bangla)
-
-// / Math Floor Number
-
-// Total Valuer por jodi point 99 o besi hoy taholeo .99 count hobe na.
-
-let Headphone = Math.floor(94.99)
-console.log(Headphone)
-
-// / Math abs Number
-
-// Negetive Value asle ta positive value hoye jabe..
-
-let price =  Math.round(Math.abs(-120.53))
-console.log(price)
-
-// ParseInt & ParseFloat 
-
-let abcPrice = 400
-let vat = (abcPrice/100*7.723)
-let newVat = vat.toFixed(2) 
-// let total = abcPrice + parseInt(newVat) 
-let total = abcPrice + parseFloat(newVat) 
-//Decimal ba point ante hole parseFloat use korte hobe
-console.log(total)
+// OR -> ||
+// AND -> &&
 
 
-// Random Math 0-1 er modde thakbe
+// Logical OR
 
-const random = Math.floor(Math.random() * 6 +1 )
-console.log(random)
+// ekta true thakle always true hobe (joto false thakuk ekta true thaklei true hobe)
+
+console.log(true || true)
+console.log(true || false)
+console.log(false || true)
+console.log(false || false)
+console.log(true || false || false || false)
+
+// Example for OR ||
+let userName = "safran"
+let password = 123456
+let pincode = 12345
+
+if (userName === "safran" || password === 123456 || pincode === 1234) {
+    console.log(userName, "is Logged In")
+} else {
+    console.log("Wrong Credentials")
+}
+
+// Example for AND &&
+// ekta false thakle always false hobe (joto true thakuk ekta false thaklei flase hobe)
 
 
-// Genarate 4 Digit OTP
+if (userName === "safran" && password === 123456 && pincode === 1234) {
+    console.log(userName, "is Logged In")
+} else {
+    console.log("Wrong Credentials")
+}
 
-const otp = Math.floor(Math.random() * 900 + 1000 )
-console.log("OTP :", otp)
+
+// False Values of JavaScript ?
+
+// Undefined
+// null
+// 0
+// ""
+// NaN
+// False
+
+// Example
+let age = 0 //or 1 or something true values
+if (age){
+console.log("Age is Here")
+}
+
+//Output : when i input age = 0 (like false values) it will be output nothing & when i input any values in age = 1 or something that time it will be show actual console.log outputs 
 
 
-// minmum and maximum number ber kor
-const min = Math.min(2, 3, 5, 7, 15, 56)
-console.log(min)
 
-const max = Math.max(2, 3, 5, 7, 15, 56)
-console.log(max)
+//Ternary : coditition ? true : false
 
-// Checking of integer
+let darkmode = true
+darkmode ? console.log("Dark Mode is ON 😎") : console.log("Light Mode is On 😉")
 
-let newValue = "123" //String if wright without inverted coma its show true
-console.log(Number.isInteger(newValue))
+let personAge = 39
+personAge >= 40 ? console.log("He is Buddha 😎") : console.log("He is Young 😉")
+
+
