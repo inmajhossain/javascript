@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</head>
+<body class="font-inter3">
+
+    <section class="flex items-center justify-center h-screen">
+    
+    <div class="max-w-[500px] w-[500px] min-h-[400px] shadow-lg bg-slate-200 p-10 rounded-lg flex flex-col gap-[15px]">
+        
+        <h2 class="text-center text-[30px] font-bold">Lets Calculate 🧮</h2>
+
+
+        <div class="flex flex-col gap-[10px]">
+            
+            <input 
+                type="number"
+                placeholder="Insert Value"
+                class=" p-3"
+                id="input1"
+               
+            />
+
+            <input
+            type="number"
+            placeholder="Insert Value"
+            class=" p-3"
+            id="input2"
+            />
+           
+            
+            <!-- //ADD -->
+            <div class="flex gap-[20px]">
+                
+                <button class="btn w-[100px] bg-gray-700 rounded-lg py-2 text-white text-[15px] font-bold mt-[10px]" onclick="addition()">Add</button>
+
+
+            <!-- //Substrace -->
+
+            <button class="btn w-[100px] bg-gray-700 rounded-lg py-2 text-white text-[15px] font-bold mt-[10px]" onclick="subtract()">Subtract</button>
+
+            <!-- //Multiply -->
+
+            <button class="btn w-[100px] bg-gray-700 rounded-lg py-2 text-white text-[15px] font-bold mt-[10px]" onclick="multiply()">Multiply</button>
+
+            <!-- //Divide -->
+
+            <button class="btn w-[100px] bg-gray-700 rounded-lg py-2 text-white text-[15px] font-bold mt-[10px]" onclick="divide()">Divide</button>
+            </div>
+            
+            <h2 class="text-[25px] font-bold text-center" id="result">Result: </h2>
+        </div>
+    </div>
+</section>
+
+<script>
+const input1 = document.getElementById("input1");
+const input2 = document.getElementById("input2");
+const result = document.getElementById("result");
+
+
+
+function addition() {
+    if (input1.value == "" || input2.value == ""){
+        alert("Please insert value");
+    } else {
+    const addition = parseInt(input1.value) + parseInt(input2.value);
+    //console.log(addition);
+    result.innerHTML = `Result: ${addition}`;
+
+    // input1.value = "";
+    // input2.value = "";
+}
+}
+
+
+
+
+function subtract() {
+    if (input1.value == "" || input2.value == ""){
+        alert("Please insert value");
+    } else {
+    const subtract = parseInt(input1.value) - parseInt(input2.value);
+    //console.log(addition);
+    result.innerHTML = `Result: ${subtract}`;
+
+    // input1.value = "";
+    // input2.value = "";
+}
+}
+
+
+function multiply() {
+    if (input1.value == "" || input2.value == ""){
+        alert("Please insert value");
+    } else {
+    const multiply = parseInt(input1.value) * parseInt(input2.value);
+    //console.log(addition);
+    result.innerHTML = `Result: ${multiply}`;
+
+    // input1.value = "";
+    // input2.value = "";
+}
+}
+
+
+
+function divide() {
+    if (input1.value == "" || input2.value == ""){
+        alert("Please insert value");
+    } else {
+    const divide = parseInt(input1.value) / parseInt(input2.value);
+    //console.log(addition);
+    result.innerHTML = `Result: ${divide}`;
+
+    // input1.value = "";
+    // input2.value = "";
+}
+}
+//Function call korte hobe
+// calculate();
+
+consol.log()
+</script>
+</html>

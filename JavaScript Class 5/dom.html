@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</head>
+<body class="font-inter3">
+
+<h1 class="w-screen  text-[50px] font-bold mx-auto text-center my-20" id="text">Lets Learn DOM Manupulation</h1>
+
+<p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, animi!</p>
+  
+  <div id="box"></div>
+</body>
+
+  
+ 
+
+  <script>
+    //Seloctor By ID getElement by ID diye ager lekha ke change kore innerText diye notun kichu lekha jay.
+    const heading = document.getElementById("text");
+    heading.innerText = "Hello World";
+    heading.style.color = "white"
+    heading.style.backgroundColor = "Red";
+    heading.style.padding = "50px"
+    // console.log(heading)
+
+//jekono id ke deke getelement e kaj kora jabe.
+
+    // const heading = document.getElementById("content");
+    // heading.innerText = "Hello World";
+    // heading.style.color = "white"
+    // heading.style.backgroundColor = "Red";
+    // heading.style.padding = "50px"
+
+
+
+
+    // div er vitore html banano jay
+
+
+
+//     const box = document.getElementById("box");
+
+// box.innerHTML =   `<h1 class='text-3xl text-center font-bold'>Life is beautifull</h1>;
+// <p class='text-2xl text-center font-bold'>I love coding</p>`; 
+
+const boxLayout = 
+`<div class="mx-auto w-[400px] bg-slate-500 text-white">
+  <h1 class='text-3xl text-center font-bold'>Life is beautifull</h1>
+  <p class='text-2xl text-center font-bold'>I love coding</p>
+  </div>`;
+
+  const box = document.getElementById("box").innerHTML = boxLayout;
+
+
+
+
+
+  
+  </script>
+
+
+
+</html>
