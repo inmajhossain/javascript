@@ -24,6 +24,29 @@ function add(num1, num2, nan3=0){
 add(40, 10, 2)
 
 
+// Function with return function Rule-01
+
+// function addition(num1, num2) {
+//     console.log(num1 + num2)
+//     return addition
+// }
+// addition(100, 850)
+
+// Function with return function Rule-02
+
+function addition(num1, num2) {
+    return num1 + num2
+}
+console.log(addition(100, 850))
+
+
+//arrow function
+// Function with return function Rule-03
+const substract = (num1, num2) => num1 - num2;
+console.log(substract(100, 30))
+
+
+
     function greetUser(name = "User", time = "Morning"){
         console.log(`Hello ${name} is true user at ${time}`)
 }
