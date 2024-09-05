@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+</head>
+<body class="font-inter3">
+
+<h1 class="w-screen  text-[50px] font-bold mx-auto text-center my-20" id="text">Lets Learn DOM Manupulation</h1>
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, perferendis.</p>
+  
+  
+
+
+
+<script>
+  let pTag = document.getElementsByTagName("p");
+//   
+pTag[0].innerHTML = "New Dom Added";
+
+
+
+let h1Tag = document.getElementsByTagName("h1");
+//   
+h1Tag[0].innerHTML = "Lets Learn DOM";
+
+
+</script>
+
+
+</body>
+
+</html>

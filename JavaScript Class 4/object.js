@@ -31,3 +31,34 @@ console.log(person)
 delete car.color
 console.log(car)
 
+
+
+let person2 = {
+    name:  "Safran",
+    age: 17,
+    profession: "Cricketer",
+    isMarried: true,
+    showMessage: function () {
+        console.log(this.name, "is a", this.profession);
+    },
+    showIfMarried: function() {
+        if (this.isMarried) {
+            console.log(this.name, "is Married");
+        } else {
+        console.log(this.name, "is unmarried");
+        }
+    },
+    checkIfAudlt: function () {
+        if (this.age > 18) {
+            console.log(this.name, "is Audlt");
+        }
+        else {
+            console.log(this.name, "is not Audlt");
+            }
+    }
+
+};
+
+person2.showMessage();
+person2.showIfMarried();
+person2.checkIfAudlt ();
