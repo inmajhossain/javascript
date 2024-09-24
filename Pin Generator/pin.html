@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 text-white">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="bg-gray-700 p-8 rounded-lg shadow-lg">
+            <h1 class="text-2xl font-bold mb-4">Pin Generator</h1>
+            <div class="flex space-x-4 mb-4">
+                <button id="generatePinButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Generate Pin</button>
+                <input type="text" id="generatedPin" class="border text-black border-gray-400 rounded px-3 py-2" readonly>
+            </div>
+            <div class="mb-4">
+                <input type="text" id="inputPin" class="border text-black border-gray-400 rounded px-3 py-2" placeholder="Enter Pin">
+            </div>
+            <button id="submitPinButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+            <div id="message" class="mt-4"></div>
+            <div id="triesLeft" class="mt-2 text-sm text-gray-400"></div>
+        </div>
+    </div>
+
+    <script>
+        const generatePinButton = document.getElementById('generatePinButton');
+        const generatedPinInput = document.getElementById('generatedPin');
+        const inputPinInput = document.getElementById('inputPin');
+        const submitPinButton = document.getElementById('submitPinButton');
+        const message = document.getElementById('message');
+        const triesLeft = document.getElementById('triesLeft');
+
+        let generatedPin = "";
+        let tries = 3;
+
+        generatePinButton.addEventListener('click', () => {
+            generatedPin = generateRandomPin(6);
+            generatedPinInput.value = generatedPin;
+        });
+
+        submitPinButton.addEventListener('click', () => {
+            const inputPin = inputPinInput.value;
+            inputPinInput.value = ''; // Clear input field
+            
+            if (inputPin === generatedPin) {
+                message.innerHTML = '<span class="text-green-500">Your Pin Matched Successfully!</span>';
+                triesLeft.innerHTML = 'You got it right!';
+            } else {
+                tries--;
+                if (tries > 0) {
+                    message.innerHTML = '<span class="text-red-500">You Enter an Incorrect Pin</span>';
+                    triesLeft.innerHTML = `${tries} tries left`;
+                } else {
+                    message.innerHTML = '<span class="text-red-500">You have run out of tries!</span>';
+                    triesLeft.innerHTML = 'Game Over!';
+                }
+            }
+        });
+
+        function generateRandomPin(length) {
+            let pin = "";
+            for (let i = 0; i < length; i++) {
+                pin += Math.floor(Math.random() * 10);
+            }
+            return pin;
+        }
+    </script>
+</body>
+</html>

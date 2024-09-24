@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pin Generator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body>
+  <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
+    <h1 class="text-5xl font-bold mb-4 text-center text-red-600">Pin Generator</h1>
+    
+    <div class="mt-4 flex flex-col gap-3" id="pin-input-container">
+      <input type="text" id="generated-pin" readonly class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+
+
+      <button class="bg-black hover:bg-orange-700 text-white font-bold py-2 text-xl px-4 rounded" id="generate-pin-btn">Generate Pin</button>
+
+
+
+
+      <input type="text" id="input-pin" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 text-xl rounded" id="submit-btn">Submit</button>
+      <p id="validation-message" class="text-gray-600"></p>
+    </div>
+  </div>
+
+  <script>
+    const generatePinBtn = document.getElementById('generate-pin-btn');
+    const generatedPinInput = document.getElementById('generated-pin');
+    const inputPinInput = document.getElementById('input-pin');
+    const submitBtn = document.getElementById('submit-btn');
+    const validationMessage = document.getElementById('validation-message');
+
+    generatePinBtn.addEventListener('click', () => {
+      const generatedPin = generateRandomPin();
+      generatedPinInput.value = generatedPin;
+      inputPinInput.value = '';
+      validationMessage.textContent = '';
+    });
+
+    submitBtn.addEventListener('click', () => {
+      const generatedPin = generatedPinInput.value;
+      const inputPin = inputPinInput.value;
+      if (generatedPin === inputPin) {
+        validationMessage.textContent = 'Welcome! This pin is valid.';
+        validationMessage.classList.add('text-green-600');
+      } else {
+        validationMessage.textContent = 'Pin is invalid!';
+        validationMessage.classList.add('text-red-600');
+      }
+    });
+
+    function generateRandomPin() {
+      return Math.floor(100000 + Math.random() * 900000);
+    }
+  </script>
+</body>
+</html>
