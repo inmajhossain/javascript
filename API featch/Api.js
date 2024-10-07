@@ -3,14 +3,28 @@
 
 const API_URL = `https://randomuser.me/api/`;
 
-function fetchApi(url) {
-  fetch(url)
-  .then((res) => res.json())
-  .then((user) => {
-    console.log(user.results[0]);
-    displayUser(user.results[0]);
-});
-}
+// function fetchApi(url) {
+//   fetch(url)
+//   .then((res) => res.json())
+//   .then((user) => {
+//     console.log(user.results[0]);
+//     displayUser(user.results[0]);
+// });
+// }
+
+
+
+const fetchUsers = async (url) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+  displayUser(data.results[0]);
+};
+
+
+fetchUsers(API_URL);
+
+
 
 const userDiv = document.getElementById("user");
 
@@ -62,10 +76,13 @@ userDiv.innerHTML = `
 
 
 
-fetchApi(API_URL); 
+//fetchApi(API_URL); 
+
+
 const generateUserBtn = document.getElementById("generate");
 generateUserBtn.addEventListener("click", ()=> {
-  fetchApi(API_URL); 
+  //fetchApi(API_URL);
+  fetchUsers(API_URL); 
 });
 
 

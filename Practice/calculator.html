@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+ <main> 
+    
+ <section class="max-w-[500px] mx-auto bg-gray-500 mt-[150px] h-[350px] p-[50px] rounded-t-[25px]">   
+<input id="input1" class="w-[400px] mx-auto items-center bg-white px-[10px] py-[10px] text-center text-black font-bold border-black border-[2px]" placeholder="Input Value"> <br><br>
+
+<input id="input2" class="w-[400px] mx-auto items-center bg-white px-[10px] py-[10px] text-center text-black font-bold border-black border-[2px]" placeholder="Input Value"> <br><br>
+<div class="mx-auto text-center m-[15px] ">
+<button onclick="addNumber()" class="bg-indigo-900 text-white font-bold px-[15px] py-[5px] border-amber-100 border-[2px]">ADD</button>
+<button onclick="substractNumber()" class="bg-indigo-900 text-white font-bold px-[15px] py-[5px] border-amber-100 border-[2px]">Substract</button>
+<button onclick="multply()" class="bg-indigo-900 text-white font-bold px-[15px] py-[5px] border-amber-100 border-[2px]">Multply</button>
+<button onclick="divide()" class="bg-indigo-900 text-white font-bold px-[15px] py-[5px] border-amber-100 border-[2px]">Divide</button>
+</div>
+<h1 id="result" class="mx-auto text-white text-center font-bold text-[35px]">Result : </h1>
+
+</section>
+
+</main>
+
+<script>
+    
+    function addNumber(){
+    let input1 = document.getElementById('input1').value;
+    let input2 = document.getElementById('input2').value;
+    let result = parseFloat(input1)+parseFloat(input2);
+    alert(result);
+    document.getElementById('result').innerHTML = `<h2>Result : ${result}</h2>
+    `
+    }
+
+    function substractNumber(){
+    let input1 = document.getElementById('input1').value;
+    let input2 = document.getElementById('input2').value;
+    let result = parseFloat(input1)-parseFloat(input2);
+    alert(result);
+    document.getElementById('result').innerHTML = `<h2>Result : ${result}</h2>
+    `
+    }
+    function multply(){
+    let input1 = document.getElementById('input1').value;
+    let input2 = document.getElementById('input2').value;
+    let result = parseFloat(input1)*parseFloat(input2);
+    alert(result);
+    document.getElementById('result').innerHTML = `<h2>Result : ${result}</h2>
+    `
+    }
+    function divide(){
+    let input1 = document.getElementById('input1').value;
+    let input2 = document.getElementById('input2').value;
+    let result = parseFloat(input1)/parseFloat(input2);
+    alert(result);
+    document.getElementById('result').innerHTML = `<h2>Result : ${result}</h2>
+    `
+    }
+
+
+</script>
+</body>
+</html>
