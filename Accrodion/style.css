@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.accordion {
+  max-width: 600px;
+  margin: auto;
+  background-color: rgb(25, 13, 32);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  height: 100px;
+  overflow: hidden;
+}
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .accordion-title h2 {
+  font-size: 1.5rem;
+  margin-left: 25px;
+  margin-top: 20px;
+} */
+.open-icon {
+  width: 40px;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.open-icon:hover {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  margin-top: 30px;
+  /* background-color: gray; */
+  border: 1px solid snow;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.close {
+  width: 30px;
+  display: inline-block;
+  height: 5px;
+  background-color: white;
+  display: none;
+  cursor: pointer;
+}
+
+/* Accordion 3 */
+
+.accordion-5 {
+  width: 380px;
+  margin: 20px auto;
+}
+.accordion-5 h1,
+h2,
+h3,
+h4 {
+  cursor: pointer;
+}
+
+.accordion-5 h1 {
+  padding: 15px 20px;
+  background-color: #333;
+  font-family: Lobster;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #1abc9c;
+}
+.accordion-5 h1:hover {
+  color: #4afcdc;
+}
+.accordion-5 h1:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.accordion-5 h1:last-of-type {
+  border-radius: 0 0 10px 10px;
+}
+.accordion-5 h1:not(:last-of-type) {
+  border-bottom: 1px dotted #1abc9c;
+}
+.accordion-5 div,
+.accordion-5 p {
+  display: none;
+}
+.accordion-5 h2 {
+  padding: 5px 25px;
+  background-color: #1abc9c;
+  font-size: 1.1rem;
+  color: #333;
+}
+.accordion-5 h2:hover {
+  background-color: #09ab8b;
+}
+.accordion-5 h3 {
+  padding: 5px 30px;
+  background-color: #b94152;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+.accordion-5 h3:hover {
+  background-color: #a93142;
+}
+.accordion-5 h4 {
+  padding: 5px 35px;
+  background-color: #ffc25a;
+  font-size: 0.9rem;
+  color: #af720a;
+}
+.accordion-5 h4:hover {
+  background-color: #e0b040;
+}
+.accordion-5 p {
+  padding: 15px 35px;
+  background-color: #ddd;
+  font-family: "Georgia";
+  font-size: 0.8rem;
+  color: #333;
+  line-height: 1.3rem;
+}
+.accordion-5 .opened-for-codepen {
+  display: block;
+}
